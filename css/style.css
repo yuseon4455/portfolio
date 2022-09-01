@@ -1,0 +1,195 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#main-header{
+        width: 100%;
+        height: 98px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #F5F6F9;
+}
+
+#main-header .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#main-header h1 {
+    padding-left: 50px;
+}
+
+#main-header nav {
+    width: 1000px;
+    text-align: center;
+}
+
+#main-header nav ul.gnb {
+    width: 100%;
+}
+
+#main-header nav ul.gnb>li {
+    width: 20%;
+    float: left;
+    position: relative;
+}
+
+#main-header nav ul.gnb>li>a {
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+}
+
+#main-header nav ul.gnb>li:hover>a {
+    color : #CAB3E2;
+}
+
+/* section01 */
+#section01{
+    height: 982px;
+    outline: 1px solid #000;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.container-home{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1{
+    width: 800px;
+    height: 910px;
+    outline: 1px solid #000;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2{
+    width: 456px;
+    height: 636px;
+    outline: 1px solid #000;
+}
+
+.box3{
+    width: 456px;
+    height: 636px;
+    background: #d5e5e5;
+    rotate: 15deg;
+}
+
+.port{
+    border-left: 1px solid #000;
+    font-size: 100px;
+    rotate: 90deg;
+}
+
+.folio{
+    font-size: 100px;
+    rotate: -90deg;
+    border-top: 1px solid #000;
+}
+
+/* section02 */
+#section02{
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+.container-page{
+    outline: 1px solid red;
+}
+
+.box-m{
+    width: 512px;
+    height: 100%;
+    outline: 1px solid #000;
+}
+
+.box-s{
+    width: 1000px;
+    height: 100%;
+    outline: 1px solid #000;
+}
+
+/* section03 */
+#section03{
+    width: 100%;
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+/* section04 */
+#section04{
+    width: 100%;
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+/* section05 */
+#section05{
+    width: 100%;
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+/* section06 */
+#section06{
+    width: 100%;
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+/* section07 */
+#section07{
+    width: 100%;
+    height: 982px;
+    outline: 1px solid #000;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 135px;
+    background: #F5F6F9;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container p{
+    font-size: 22px;
+}

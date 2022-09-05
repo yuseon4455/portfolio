@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <style>
+        .moving{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+width: 100%;
+height: 884px;
+background: url(./images/main.jpg) 0 center / 1512px repeat-x;
+animation: movebg 8s linear infinite;
+        }
+
+@keyframes movebg {
+    0%{
+        background-position: 0 center;
+    }
+    100%{
+        background-position: 1512px center;
+    }
+}
+
+    </style>
     <header id="main-header">
         <div class="container">
             <h1>
@@ -27,28 +50,64 @@
     </header>
     <!-- section01 -->
     <section id="section01">
-        <div class="container-home">
-            <div class="port">PORT</div>
-            <div class="box1">
-                <div class="box2"></div>
-            <div class="box3"></div>
-            </div>
-            <div class="folio">FOLIO</div>
+       <div class="moving">
+        <p class="a">PORTFOLIO</p>
+       <p class="i">백유선</p>
         </div>
     </section>     
 
     <!-- section02 -->
     <section id="section02">
-       <div class="container-page">
-        <div class="box-m"></div>
-        <div class="box-s"></div>
-       </div>
+       <article>
+        <div class="container-in">
+            <div class="frist">
+                <img src="./images/picture.png" alt="">
+                <p class="f">백유선</p>
+                <p class="r">2002.03.26</p>
+            </div>
+            <div class="second">
+                <p class="c">skill</p>
+                <hr>
+                <div class="simg">
+                    <img src="./images/skill1.jpg" alt=""><p>00%</p>
+                    <img src="./images/skill2.jpg" alt=""><p>00%</p>
+                    <img src="./images/skill3.jpg" alt=""><p>00%</p>
+                    <img src="./images/skill4.jpg" alt=""><p>00%</p>
+                </div>
+                <p class="s">2020년 김포제일고등학교 졸업</p>
+                <p class="s">2021년 한양여자대학교 소프트융합과 입학</p>
+                <p class="s">2022년 휴학 </p>
+                <p class="s">2022년 김포이젠아카데미 웹퍼블리셔 과정 수료 </p>
+            </div>
+        </div>  <!--container-->
+       </article>
     </section>
 
     <!-- section03 -->
     <section id="section03">
-        <div class="container-art">
-        </div>
+        <article>
+            <div class="container-art">
+              <img src="./images/art.jpg" alt="" class="art1">
+                <div class="artp">
+                    <p class="artp1">Impressionism artist</p>
+                    <p class="artp2">디자인:3일 제작기간 : 1주</p>
+                    <p class="artp3">Color</p>
+                    <div class="Box">
+                        <div class="box">
+                        <div class="box1"></div>
+                        <div class="box2"></div>
+                        <div class="box3"></div>
+                        <div class="boxp">
+                            <p>#000</p>
+                            <p>#F9FE00</p>
+                            <p>#FFF</p>
+                        </div>
+                        </div>
+                    </div>
+                    <p class="artp4"><a href="./"></a> Web</a></p>
+                </div>
+            </div>  <!--container-->
+           </article>
     </section>
 
     <!-- section04 -->

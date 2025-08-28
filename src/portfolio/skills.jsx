@@ -11,23 +11,23 @@ const Skills = () => {
           <h2>Frontend</h2>
           <div className="skill-grid">
             <div className="skill-card">
-              <img src="./images/devicon_vitejs.png" alt="React" />
+              <img src="/images/devicon_vitejs.png" alt="React" />
               <span>React</span>
             </div>
             <div className="skill-card">
-              <img src="./images/vscode-icons_file-type-js-official.png" alt="JavaScript" />
+              <img src="/images/vscode-icons_file-type-js-official.png" alt="JavaScript" />
               <span>JavaScript</span>
             </div>
             <div className="skill-card">
-              <img src="./images/material-icon-theme_html.png" alt="HTML" />
+              <img src="/images/material-icon-theme_html.png" alt="HTML" />
               <span>HTML</span>
             </div>
             <div className="skill-card">
-              <img src="./images/skill-icons_css.png" alt="CSS" />
+              <img src="/images/skill-icons_css.png" alt="CSS" />
               <span>CSS</span>
             </div>
             <div className="skill-card">
-              <img src="./images/skill-icons_figma-light.png" alt="Figma" />
+              <img src="/images/skill-icons_figma-light.png" alt="Figma" />
               <span>Figma</span>
             </div>
           </div>

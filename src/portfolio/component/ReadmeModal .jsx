@@ -1,11 +1,65 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const ReadmeModal = ({ openModal, closeReadmeModal }) => {
+  // 모달이 열릴 때 배경 스크롤 방지
+  useEffect(() => {
+    if (openModal) {
+      const scrollY = window.scrollY;
+      
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      
+      return () => {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [openModal]);
+
   if (!openModal) return null;
 
   return (
-    <div className="readme-modal" style={{display: 'flex'}}>
-      <div className="readme-modal-content">
+    <div 
+      className="readme-modal" 
+      style={{
+        display: 'flex',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100vh',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        justifyContent: 'center',
+        alignItems: 'center',
+        zIndex: 1000,
+        padding: '20px',
+        boxSizing: 'border-box'
+      }}
+      onClick={closeReadmeModal} // 바깥 클릭 시 모달 닫기
+    >
+      <div 
+        className="readme-modal-content"
+        style={{
+          backgroundColor: '#ffffff',
+          borderRadius: '16px',
+          width: '90%',
+          maxWidth: '600px',
+          maxHeight: '80vh',
+          overflowY: 'auto',
+          position: 'relative',
+          border: '1px solid #e0e0e0',
+          margin: 'auto', // 중앙 정렬 강제
+          left: 0,
+          right: 0
+        }}
+        onClick={(e) => e.stopPropagation()} // 모달 내부 클릭 시 이벤트 버블링 방지
+      >
         <span className="readme-close-btn" onClick={closeReadmeModal}>&times;</span>
         
         {/* RocketBookstore README */}

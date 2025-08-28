@@ -1,7 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // 모달이 열릴 때 배경 스크롤 방지
+  useEffect(() => {
+    if (isOpen) {
+      const scrollY = window.scrollY;
+
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+
+      return () => {
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+
+        window.scrollTo(0, scrollY);
+      };
+    }
+  }, [isOpen]);
 
   if (!isOpen || !images || images.length === 0) return null;
 
@@ -26,33 +47,38 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
   const currentImage = images[currentIndex];
 
   return (
-    <div 
+    <div
       style={{
         position: 'fixed',
         top: 0,
         left: 0,
+        right: 0,
+        bottom: 0,
         width: '100vw',
         height: '100vh',
         backgroundColor: 'rgba(0, 0, 0, 0.85)',
+        zIndex: 1000,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        zIndex: 1000,
-        padding: '20px'
+        margin: 0,
+        padding: 0
       }}
       onClick={onClose}
     >
-      <div 
+      <div
         style={{
           backgroundColor: 'white',
           borderRadius: '12px',
-          width: '90%',
-          maxWidth: '800px',
-          maxHeight: '90vh',
-          position: 'relative',
+          width: '600px',
+          height: '500px',
+          maxWidth: '90vw',
           display: 'flex',
           flexDirection: 'column',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          position: 'relative',
+          margin: 0,
+          transform: 'none'
         }}
         onClick={(e) => e.stopPropagation()}
       >
@@ -68,7 +94,7 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
           <h3 style={{ margin: 0, fontSize: '18px' }}>
             {projectName} 프로젝트
           </h3>
-          <button 
+          <button
             onClick={onClose}
             style={{
               background: 'none',
@@ -90,7 +116,7 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
           justifyContent: 'center',
           position: 'relative',
           padding: '20px',
-          minHeight: '400px'
+          minHeight: '300px'
         }}>
           {/* 현재 이미지 */}
           <div style={{
@@ -100,7 +126,7 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
             alignItems: 'center',
             justifyContent: 'center'
           }}>
-            <img 
+            <img
               src={currentImage.src}
               alt={currentImage.alt}
               style={{
@@ -142,7 +168,7 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
               >
                 ‹
               </button>
-              
+
               <button
                 onClick={nextImage}
                 style={{

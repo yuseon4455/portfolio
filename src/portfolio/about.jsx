@@ -7,7 +7,7 @@ const About = () => {
       <h1 className="about-h1">ABOUT ME</h1>
       <div className="about-grid">
         <div className="about-column">
-          <img src="./images/myphoto.jpg" alt="프로필 사진" />
+          <img src="/images/myphoto.jpg" alt="프로필 사진" />
         </div>
         <div className="about-column">
           <div className="about-item">

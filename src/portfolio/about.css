@@ -1,0 +1,201 @@
+/* About Page Styles */
+.about-h1 {
+    font-size: 40px;
+}
+
+.about-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.about-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+.about-column img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+}
+
+.about-item {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+}
+
+.about-p {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Archiving Section */
+.archiving-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+
+.arch-grid {
+    display: flex;
+    gap: 50px;
+    margin: 50px 0 50px 0;
+}
+
+.arch-git-card,
+.arch-blog-card {
+    width: 300px;
+    height: 145px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.arch-wrapper {
+    margin: auto;
+    text-align: left;
+}
+
+.arch-git-card:hover,
+.arch-blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-link {
+    display: block;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+.archiving-description {
+    color: #555;
+    font-size: 16px;
+}
+
+/* 태블릿 (769px 이상) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .about-grid {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .about-item {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .about-p {
+        font-size: 18px;
+    }
+
+    .arch-grid {
+        gap: 30px;
+        justify-content: center;
+        margin: 50px 0;
+    }
+
+    .arch-git-card,
+    .arch-blog-card {
+        height: auto;
+        padding: 20px;
+    }
+
+    .arch-wrapper {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .archiving-description {
+        font-size: 14px;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .about-h1,
+    .archiving-title {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+    .about-grid {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 30px;
+    }
+
+    .about-column {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-column img {
+        max-width: 400px;
+        margin: 0 auto 20px auto;
+    }
+
+    .about-item {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .about-p {
+        font-size: 18px;
+    }
+
+    .arch-grid {
+        flex-direction: column;
+        gap: 30px;
+        margin: 40px 0;
+        align-items: center;
+    }
+
+    .arch-git-card,
+    .arch-blog-card {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .arch-wrapper {
+        text-align: center;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+
+    .card-link {
+        font-size: 14px;
+    }
+
+    .archiving-description {
+        font-size: 14px;
+    }
+}

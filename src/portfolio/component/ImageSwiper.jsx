@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './ImageSwiper.css';
 
-const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
+const ImageSwiper = ({ images, projectName, isOpen, onClose, cardPosition }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (isOpen) {
       setCurrentIndex(0);
+      // 모달이 열릴 때 배경 스크롤 방지
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = '';
+      };
     }
   }, [isOpen]);
 
@@ -24,13 +29,21 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
 
   return (
     <div className="image-modal-overlay" onClick={onClose}>
-      <div className="image-modal-container" onClick={(e) => e.stopPropagation()}>
-        {/* 닫기 버튼 */}
+      <div
+        className="image-modal-container"
+        style={{
+          position: 'fixed',
+          top: cardPosition ? `${cardPosition.top}px` : '50%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 1002,
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
         <button className="image-modal-close" onClick={onClose}>
           ×
         </button>
 
-        {/* 이미지 영역 */}
         <div className="image-modal-content">
           <img
             src={currentImage.src}
@@ -42,20 +55,16 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
           />
         </div>
 
-        {/* 하단 컨트롤 */}
         <div className="image-modal-controls">
-          {/* 이전/다음 버튼 */}
           {images.length > 1 && (
             <>
               <button className="image-control-prev" onClick={prevImage}>
                 ‹
               </button>
-              
-              {/* 페이지 표시 */}
               <div className="image-page-indicator">
                 {currentIndex + 1} / {images.length}
               </div>
-              
+
               <button className="image-control-next" onClick={nextImage}>
                 ›
               </button>
@@ -67,4 +76,4 @@ const ImageModalSwiper = ({ images, projectName, isOpen, onClose }) => {
   );
 };
 
-export default ImageModalSwiper;
+export default ImageSwiper;

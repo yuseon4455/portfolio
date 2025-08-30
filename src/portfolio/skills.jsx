@@ -1,4 +1,5 @@
 import React from 'react';
+import './skills.css';
 import './style.css';
 
 const Skills = () => {
@@ -39,19 +40,19 @@ const Skills = () => {
         <div className="skill-inner">
           <div className="skill-grid">
             <div className="skill-card">
-              <img src="./images/vscode-icons_file-type-java.png" alt="Java" />
+              <img src="/images/vscode-icons_file-type-java.png" alt="Java" />
               <span>Java</span>
             </div>
             <div className="skill-card">
-              <img src="./images/skill-icons_spring-light.png" alt="Spring" />
+              <img src="/images/skill-icons_spring-light.png" alt="Spring" />
               <span>Spring</span>
             </div>
             <div className="skill-card">
-              <img src="./images/simple-icons_springboot.png" alt="Spring Boot" />
+              <img src="/images/simple-icons_springboot.png" alt="Spring Boot" />
               <span>Spring Boot</span>
             </div>
             <div className="skill-card">
-              <img src="./images/devicon_java.png" alt="JSP" />
+              <img src="/images/devicon_java.png" alt="JSP" />
               <span>JSP</span>
             </div>
           </div>
@@ -62,7 +63,7 @@ const Skills = () => {
         <h2>Tools</h2>
         <div className="skill-grid">
           <div className="skill-card">
-            <img src="./images/skill-icons_aws-light.png" alt="AWS" />
+            <img src="/images/skill-icons_aws-light.png" alt="AWS" />
             <span>AWS</span>
           </div>
           <div className="skill-card">
@@ -70,11 +71,11 @@ const Skills = () => {
             <span>Git</span>
           </div>
           <div className="skill-card">
-            <img src="./images/mdi_github.png" alt="GitHub" />
+            <img src="/images/mdi_github.png" alt="GitHub" />
             <span>GitHub</span>
           </div>
           <div className="skill-card">
-            <img src="./images/devicon_eclipse.png" alt="Eclipse" />
+            <img src="/images/devicon_eclipse.png" alt="Eclipse" />
             <span>Eclipse</span>
           </div>
         </div>
@@ -84,11 +85,11 @@ const Skills = () => {
         <h2>Database</h2>
         <div className="skill-grid">
           <div className="skill-card">
-            <img src="./images/lineicons_oracle.png" alt="Oracle" />
+            <img src="/images/lineicons_oracle.png" alt="Oracle" />
             <span>Oracle</span>
           </div>
           <div className="skill-card">
-            <img src="./images/skill-icons_supabase-light.png" alt="Supabase" />
+            <img src="/images/skill-icons_supabase-light.png" alt="Supabase" />
             <span>Supabase</span>
           </div>
         </div>

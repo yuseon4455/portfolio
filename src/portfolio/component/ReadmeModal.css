@@ -1,72 +1,140 @@
-/* Modal Content Wrapper */
-.modal-content-wrapper {
+.project-modal-content-wrapper {
   padding: 0;
 }
 
-.modal-content-wrapper p,
-.modal-content-wrapper ul,
-.modal-content-wrapper h3,
-.modal-content-wrapper h4 {
+.project-modal-content-wrapper p,
+.project-modal-content-wrapper ul,
+.project-modal-content-wrapper h3,
+.project-modal-content-wrapper h4 {
   padding-left: 32px;
   padding-right: 32px;
 }
 
-.modal-content-wrapper h2 {
-  margin: 0;
-  padding: 20px 0 24px 30px;
-  font-size: 24px;
-  font-weight: bold;
-  background: #eee;
+.project-modal-content-wrapper h2 {
+  padding-left: 32px;
+  padding-right: 60px;
 }
 
-.modal-content-wrapper p {
+
+.project-readme-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-readme-modal-content {
+  position: fixed;
+  background: white;
+  border-radius: 8px;
+  max-width: 100%;
+  max-height: 50%;
+  overflow-y: auto;
+  z-index: 1001;
+  left: 50%;
+  margin-top: -110px;
+  transform: translateX(-50%);
+}
+
+
+.project-readme-modal-content h2 {
+  margin: 0;
+  padding: 32px 32px 24px 32px;
+  font-size: 24px;
+  font-weight: bold;
+  border-bottom: 2px solid #eee;
+  padding-right: 60px;
+  background: #f8f9fa;
+  border-radius: 16px 16px 0 0;
+  color: #333;
+}
+
+.project-readme-close-btn {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1010;
+  color: #666;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.project-readme-close-btn:hover {
+  color: #333;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.project-readme-modal-content>p,
+.project-readme-modal-content>ul,
+.project-readme-modal-content>h3,
+.project-readme-modal-content>h4 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.project-readme-modal-content p {
   margin: 20px 0;
   color: #333;
   font-size: 15px;
+  line-height: 1.6;
 }
 
-.modal-content-wrapper p:first-of-type {
+.project-readme-modal-content p:first-of-type {
   margin-top: 24px;
 }
 
-.modal-content-wrapper p strong {
-  color: #2c3e50;
+.project-readme-modal-content p strong {
+  color: #333;
   font-weight: bold;
 }
 
-.modal-content-wrapper h3 {
+.project-readme-modal-content h3 {
   margin: 32px 0 16px 0;
-  color: #34495e;
-  font-size: 18px;
+  color: #333;
+  font-size: 20px;
   font-weight: bold;
   display: flex;
   align-items: center;
   gap: 8px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
 }
 
-.modal-content-wrapper h4 {
+.project-readme-modal-content h4 {
   margin: 24px 0 12px 0;
-  color: #34495e;
-  font-size: 16px;
+  color: #333;
+  font-size: 17px;
   font-weight: bold;
   padding-left: 48px;
 }
 
-.modal-content-wrapper ul {
+.project-readme-modal-content ul {
   margin: 16px 0;
   padding-left: 48px;
   list-style: none;
 }
 
-.modal-content-wrapper li {
+.project-readme-modal-content li {
   margin: 12px 0;
   color: #333;
   font-size: 14px;
   position: relative;
   padding-left: 20px;
+  line-height: 1.5;
 }
 
-.modal-content-wrapper li::before {
+.project-readme-modal-content li::before {
   content: "▸";
   color: #0E7EC0;
   font-weight: bold;
@@ -75,90 +143,159 @@
   top: 0;
 }
 
-.modal-content-wrapper li strong {
-  color: #34495e;
+.project-readme-modal-content li strong {
+  color: #333;
   font-weight: 600;
 }
 
-.modal-content-wrapper a {
+.project-readme-modal-content a {
   color: #0E7EC0;
   text-decoration: none;
   font-weight: 500;
   border-bottom: 1px solid transparent;
 }
 
-.modal-content-wrapper a:hover {
+.project-readme-modal-content a:hover {
   text-decoration: underline;
   border-bottom: 1px solid #0E7EC0;
+  color: #065a87;
 }
 
-.modal-content-wrapper p:last-of-type {
+.project-readme-modal-content p:last-of-type {
   margin-bottom: 32px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid #eee;
 }
 
-/* 모달 헤더 */
-.readme-modal-header {
-  background: #000;
-  color: white;
-  padding: 20px 28px;
-  position: relative;
-}
-
-/* 닫기 버튼 */
-.readme-modal-close {
-  position: absolute;
-  top: 20px;
-  right: 24px;
-  background: rgba(255, 255, 255, 0.2);
-  border: none;
-  color: white;
-  font-size: 24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.readme-modal-close:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-/* 모달 제목 */
-.readme-modal-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 0;
-  padding-right: 60px;
-}
-
-/* 스크롤바 커스터마이징 */
-.readme-modal-container::-webkit-scrollbar {
+.project-readme-modal-content::-webkit-scrollbar {
   width: 8px;
 }
 
-.readme-modal-container::-webkit-scrollbar-track {
+.project-readme-modal-content::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 4px;
 }
 
-.readme-modal-container::-webkit-scrollbar-thumb {
+.project-readme-modal-content::-webkit-scrollbar-thumb {
   background: #c1c1c1;
   border-radius: 4px;
 }
 
-.readme-modal-container::-webkit-scrollbar-thumb:hover {
+.project-readme-modal-content::-webkit-scrollbar-thumb:hover {
   background: #a1a1a1;
 }
 
-.project-video {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+.project-video,
+.project-images img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .project-readme-modal {
+    padding: 10px;
+  }
+
+  .project-readme-modal-content {
+    width: 95vw;
+    max-height: 85vh;
+    border-radius: 12px;
+  }
+
+  .project-readme-modal-content h2 {
+    font-size: 20px;
+    padding: 24px 20px 18px 20px;
+    padding-right: 50px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .project-readme-close-btn {
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .project-modal-content-wrapper p,
+  .project-modal-content-wrapper ul,
+  .project-modal-content-wrapper h3,
+  .project-modal-content-wrapper h4 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .project-readme-modal-content h3 {
+    font-size: 18px;
+    margin: 24px 0 12px 0;
+  }
+
+  .project-readme-modal-content h4 {
+    font-size: 16px;
+    padding-left: 32px;
+  }
+
+  .project-readme-modal-content ul {
+    padding-left: 32px;
+  }
+
+  .project-readme-modal-content p {
+    font-size: 14px;
+    margin: 16px 0;
+  }
+
+  .project-readme-modal-content li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-readme-modal {
+    padding: 5px;
+  }
+
+  .project-readme-modal-content {
+    width: 98vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+
+  .project-readme-modal-content h2 {
+    font-size: 18px;
+    padding: 20px 16px 16px 16px;
+    padding-right: 45px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .project-readme-close-btn {
+    top: 18px;
+    right: 18px;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .project-modal-content-wrapper p,
+  .project-modal-content-wrapper ul,
+  .project-modal-content-wrapper h3,
+  .project-modal-content-wrapper h4 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .project-readme-modal-content h3 {
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+  }
+
+  .project-readme-modal-content h4 {
+    font-size: 15px;
+    padding-left: 28px;
+  }
+
+  .project-readme-modal-content ul {
+    padding-left: 28px;
+  }
 }

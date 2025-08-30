@@ -1,0 +1,117 @@
+/* Skills Page Styles */
+.page.page-03 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page3-h1 {
+    font-size: 40px;
+}
+
+.skill-category {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skill-category h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 18px;
+}
+
+.skill-card {
+    width: 100px;
+    text-align: center;
+}
+
+.skill-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+}
+
+.skill-card span {
+    display: block;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 태블릿 (769px 이상) */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .skill-category h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .skill-grid {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .skill-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill-card span {
+        font-size: 14px;
+    }
+}
+
+/* 모바일 (768px 이하) */
+@media (max-width: 768px) {
+    .page3-h1 {
+        font-size: 32px;
+    }
+
+    .skill-category {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .skill-inner {
+        width: 100%;
+        max-width: 748px;
+        text-align: left;
+    }
+
+    .skill-category h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .skill-grid {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .skill-card {
+        width: 80px;
+    }
+
+    .skill-card img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .skill-card span {
+        font-size: 12px;
+    }
+}

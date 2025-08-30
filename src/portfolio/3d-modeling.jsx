@@ -1,4 +1,5 @@
 import React from 'react';
+import './3d-modeling.css';
 import './style.css';
 
 const Modeling3D = () => {

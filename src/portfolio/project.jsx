@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ImageModalSwiper from './component/ImageSwiper';
-import ReadmeModal from './component/ReadmeModal ';
+import ReadmeModal from './component/ReadmeModal';
 import './style.css';
 
 const Project = () => {
@@ -8,7 +8,7 @@ const Project = () => {
   const [openImageModal, setOpenImageModal] = useState(null);
 
   const openReadmeModal = (projectId) => {
-    setOpenModal(projectId);
+  setOpenModal(projectId);
   };
 
   const closeReadmeModal = () => {
@@ -23,7 +23,6 @@ const Project = () => {
     setOpenImageModal(null);
   };
 
-  // PPT 링크를 여는 함수
   const openPPT = (url) => {
     window.open(url, '_blank');
   };

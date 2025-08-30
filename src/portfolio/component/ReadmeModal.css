@@ -1,0 +1,164 @@
+/* Modal Content Wrapper */
+.modal-content-wrapper {
+  padding: 0;
+}
+
+.modal-content-wrapper p,
+.modal-content-wrapper ul,
+.modal-content-wrapper h3,
+.modal-content-wrapper h4 {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.modal-content-wrapper h2 {
+  margin: 0;
+  padding: 20px 0 24px 30px;
+  font-size: 24px;
+  font-weight: bold;
+  background: #eee;
+}
+
+.modal-content-wrapper p {
+  margin: 20px 0;
+  color: #333;
+  font-size: 15px;
+}
+
+.modal-content-wrapper p:first-of-type {
+  margin-top: 24px;
+}
+
+.modal-content-wrapper p strong {
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.modal-content-wrapper h3 {
+  margin: 32px 0 16px 0;
+  color: #34495e;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.modal-content-wrapper h4 {
+  margin: 24px 0 12px 0;
+  color: #34495e;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 48px;
+}
+
+.modal-content-wrapper ul {
+  margin: 16px 0;
+  padding-left: 48px;
+  list-style: none;
+}
+
+.modal-content-wrapper li {
+  margin: 12px 0;
+  color: #333;
+  font-size: 14px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.modal-content-wrapper li::before {
+  content: "▸";
+  color: #0E7EC0;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.modal-content-wrapper li strong {
+  color: #34495e;
+  font-weight: 600;
+}
+
+.modal-content-wrapper a {
+  color: #0E7EC0;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+
+.modal-content-wrapper a:hover {
+  text-decoration: underline;
+  border-bottom: 1px solid #0E7EC0;
+}
+
+.modal-content-wrapper p:last-of-type {
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* 모달 헤더 */
+.readme-modal-header {
+  background: #000;
+  color: white;
+  padding: 20px 28px;
+  position: relative;
+}
+
+/* 닫기 버튼 */
+.readme-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.readme-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* 모달 제목 */
+.readme-modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding-right: 60px;
+}
+
+/* 스크롤바 커스터마이징 */
+.readme-modal-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.readme-modal-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.readme-modal-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.readme-modal-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+.project-video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
